@@ -1,0 +1,199 @@
+.contactUsimgBg {
+  height: 55rem;
+  width: 60%;
+  position: absolute;
+  top: 8rem;
+  right: 40rem;
+}
+.contactUsimgBg img {
+  height: 100%;
+  width: 100%;
+  transform: rotate(20deg);
+  opacity: 0.2;
+}
+.contactUscontainer {
+  height: 55rem;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.contactUscontainer .left {
+  height: 90%;
+  width: 40%;
+  position: absolute;
+  top: 3rem;
+  left: 5rem;
+}
+.contactUscontainer .left img {
+  height: 97%;
+}
+.contactUscontainer .right {
+  height: 90%;
+  width: 40%;
+  position: absolute;
+  right: 4rem;
+}
+.contactUscontainer .right h1 {
+  font-size: 3.8em;
+  text-transform: capitalize;
+}
+.contactUscontainer .right p {
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contactUscontainer .right form {
+  height: 60%;
+  width: 73%;
+  padding: 1.5rem;
+  border: 0.1rem solid #e7e4e4;
+  border-radius: 1rem;
+  background-color: #e7e4e4;
+  margin-bottom: 6rem;
+}
+.contactUscontainer .right form input {
+  height: 10%;
+  width: 97%;
+  padding: 2rem;
+  margin: 0.6rem;
+  border-radius: 0.9rem;
+  border: 0.1rem solid #bdbdbd;
+}
+.contactUscontainer .right form textarea {
+  width: 97%;
+  padding: 2rem;
+  margin: 0.6rem;
+  border-radius: 0.9rem;
+  border: 0.1rem solid #bdbdbd;
+  font-size: 1.4rem;
+}
+.contactUscontainer .right form .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contactUscontainer .right form .btn button {
+  height: 4rem;
+  width: 10rem;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 0.6rem;
+  background: #bdbdbd;
+  border: none;
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  html {
+    font-size: 48%;
+  }
+  .contactUsimgBg {
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    top: 5rem;
+    left: 1rem;
+  }
+  .contactUscontainer {
+    height: 55rem;
+    width: 100%;
+    position: relative;
+  }
+  .contactUscontainer .left {
+    height: 90%;
+    width: 100%;
+    position: absolute;
+    top: 40rem;
+    left: 0;
+  }
+  .contactUscontainer .left img {
+    height: 100%;
+    width: 100%;
+  }
+  .contactUscontainer .right {
+    height: 90%;
+    width: 95%;
+    position: absolute;
+    top: 0;
+    left: 1rem;
+  }
+  .contactUscontainer .right h1 {
+    font-size: 4.5rem;
+  }
+  .contactUscontainer .right p {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    padding-left: 12rem;
+  }
+  .contactUscontainer .right form {
+    height: 60%;
+    width: 100%;
+  }
+  footer {
+    display: none;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  html {
+    font-size: 54%;
+  }
+  .contactUsimgBg {
+    position: absolute;
+    top: 8rem;
+    right: 15rem;
+  }
+  .contactUscontainer .left {
+    position: absolute;
+    top: 5rem;
+    left: -2rem;
+  }
+  .contactUscontainer .left img {
+    height: 85%;
+  }
+  .contactUscontainer .right {
+    position: absolute;
+    top: 5rem;
+    right: 3rem;
+  }
+  .contactUscontainer .right h1 {
+    font-size: 3.2rem;
+  }
+  .contactUscontainer .right p {
+    font-size: 1.8rem;
+  }
+  footer {
+    display: none;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 1260px) {
+  html {
+    font-size: 60.5%;
+  }
+  .contactUsimgBg {
+    position: absolute;
+    top: 8rem;
+    right: 15rem;
+  }
+  .contactUscontainer .left {
+    position: absolute;
+    top: 5rem;
+    left: 2rem;
+  }
+  .contactUscontainer .left img {
+    height: 85%;
+  }
+  .contactUscontainer .right {
+    position: absolute;
+    top: 5rem;
+    right: 4rem;
+  }
+  .contactUscontainer .right h1 {
+    font-size: 3.6rem;
+  }
+  .contactUscontainer .right p {
+    font-size: 1.9rem;
+  }
+}

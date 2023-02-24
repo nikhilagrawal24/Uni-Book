@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="user/base::layout(~{::section})">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+<section>
+    <div class="container">
+        <div class="profileContainer">
+            <div class="profileimg" th:unless="${user.imageUrl}=='profile.png'">
+                <img alt="" th:src="@{'/img/'+ ${user.id} + '_'+ ${user.imageUrl}}">
+            </div>
+            <div class="profileDetails">
+                <p th:text="${user.name}">Name</p>
+                <p th:text="${user.email}">Email</p>
+                <p th:text="${user.number}">number</p>
+            </div>
+            <button id="updateProfile"><a th:href="@{/user/updateProfile}">Update profile</a></button>
+        </div>
+
+        <div class="border"></div>
+
+        <div class="contactContainer">
+            <p class="contactHeading">
+                Your Contacts
+            </p>
+
+
+            <div class="showContacts" th:each="contact: ${contacts}">
+                <button class="ContactAccordian" th:text="${contact.cName}"></button>
+                <div class="cardBox">
+                    <div class="card">
+                        <div class="imageAndName">
+                            <img th:src="@{'/img/'+ ${contact.cProfilePic}}" alt="" srcset="">
+                        </div>
+                        <div class="allDetails">
+                            <div class="detailsItems">
+                                <p><label>Name: </label><span th:text="${contact.cName}"></span></p>
+                                <p><label>Mobile: </label><span th:text="${contact.cNumber}"></span></p>
+                                <p><label>Email: </label><span th:text="${contact.cEmail}"></span></p>
+                                <p><label>About: </label><span th:text="${contact.work}"></span></p>
+                            </div>
+                            <div class="detailsBtn">
+                                <a th:href="@{'/user/updateContact/'+${contact.cId}}">
+                                    <button style="background-color: #0275d8;">Edit</button>
+                                </a>
+                                <a th:href="@{'/user/delete/'+${contact.cId}}">
+                                    <button style="background-color: #d9534f;">Delete</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contactDetails">
+            <p class="contactHeading">
+                <span>Enter Contact Details</span>
+                <iconify-icon icon="material-symbols:close" id="closeBtn"></iconify-icon>
+            </p>
+            <div class="ContactForm">
+                <form th:action="@{/user/addContact}" method="post" enctype="multipart/form-data"
+                      th:object="${contact}">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="cName" placeholder="Enter your name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="cEmail" placeholder="Enter your email">
+
+                    <label for="number">Number</label>
+                    <input type="number" id="number" name="cNumber" placeholder="Enter your number" required>
+
+                    <label for="about">About</label>
+                    <input type="text" id="about" name="work" placeholder="Enter your about">
+
+                    <label for="image">Choose Image</label>
+                    <input type="file" id="image" name="cProfilePic" placeholder="Enter your email">
+
+                    <button type="submit" id="contactDetailsSubmit">Add Contact</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="addIcon">
+        <iconify-icon icon="material-symbols:add-circle" id="addIcon"></iconify-icon>
+    </div>
+</section>
+
+</body>
+
+</html>

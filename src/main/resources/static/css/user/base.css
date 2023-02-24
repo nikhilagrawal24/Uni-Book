@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.icon {
+  font-size: 5rem;
+  padding-top: 0.6rem;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(250, 248, 248);
+  min-width: 300px;
+}
+.navbar {
+  height: 6.2rem;
+  width: 100%;
+  padding: 0rem 10rem;
+  background-color: #093b4b;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .navLogo {
+  height: 100%;
+}
+.navbar .navLogo a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  float: left;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.navbar .navItems {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.navbar .navItems img {
+  width: 3.7rem;
+  border-radius: 50%;
+  height: 65%;
+}
+.navbar .navItems .usernameText {
+  padding-left: 0.6rem;
+  color: white;
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+.navbar .navItems #arrow {
+  padding: 0.4rem;
+  margin-top: 0.8rem;
+  color: white;
+  font-size: 2.5rem;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.dropdown {
+  height: 12.4rem;
+  width: 15rem;
+  position: absolute;
+  top: 5.8rem;
+  right: 6rem;
+  background-color: #f9f9f9;
+  border: none;
+  border-radius: 0.9rem;
+  box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgb(175, 174, 174);
+  z-index: 9999999999;
+}
+.dropdown a {
+  color: black;
+  border-bottom: 1px solid #c6ccce;
+  font-size: 2.1rem;
+  padding: 1.8rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.4s;
+}
+.dropdown a:hover {
+  background-color: #164150;
+  color: white;
+}
+footer {
+  background-color: #093b4b;
+  height: 20rem;
+  width: 100%;
+  padding: 2rem 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .footerlogo {
+  height: 42%;
+  width: 13%;
+}
+footer .footerlogo a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+footer .footerlogo a .logoText {
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+}
+footer .footerItems {
+  height: 100%;
+  width: 85%;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footerItems .items {
+  height: 100%;
+  width: 100%;
+  margin: 0rem 1rem;
+}
+footer .footerItems .items ul {
+  height: 100%;
+  width: 100%;
+}
+footer .footerItems .items ul .heading {
+  color: #bdbdbd;
+  font-size: 1.9rem;
+  width: 100%;
+  display: flex;
+  height: 27%;
+}
+footer .footerItems .items ul li {
+  list-style: none;
+  height: 25%;
+}
+footer .footerItems .items ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.8rem;
+  display: flex;
+}
+footer .footerItems .items ul li a .footerText {
+  padding-left: 0.4rem;
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+  .navbar {
+    padding: 0rem 1rem;
+  }
+  .navbar ul {
+    display: flex;
+  }
+  .navbar ul li img {
+    width: 3.1rem;
+  }
+  .navbar ul li .username {
+    font-size: 2.2rem;
+  }
+  footer {
+    height: 30rem;
+    padding: 0rem;
+    display: flex;
+    justify-content: space-around;
+  }
+  footer .footerlogo {
+    display: none;
+  }
+  footer .footerItems {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 40% 40%;
+    grid-template-columns: 55% 55%;
+  }
+  footer .footerItems .items {
+    padding: 0.5rem 1rem;
+    height: 100%;
+    width: 80%;
+    display: flex;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+  .navbar ul {
+    display: flex;
+  }
+  footer {
+    padding: 2rem 1rem;
+  }
+  footer .footerlogo {
+    width: 20%;
+  }
+  footer .footerItems {
+    width: 80%;
+  }
+  footer .footerItems .items {
+    margin: 0rem 0.8rem;
+  }
+  footer .footerItems .items ul .heading {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  html {
+    font-size: 50%;
+  }
+  footer {
+    padding: 2rem 6rem;
+  }
+  footer .footerlogo {
+    width: 20%;
+  }
+  footer .footerItems {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1261px) {
+  html {
+    font-size: 60%;
+  }
+  footer {
+    padding: 2rem 7rem;
+  }
+  footer .footerlogo {
+    width: 20%;
+  }
+  footer .footerItems {
+    width: 79%;
+  }
+}

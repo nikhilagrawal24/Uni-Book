@@ -1,0 +1,234 @@
+.container {
+  height: 55rem;
+  width: 100%;
+}
+.container .imgBg {
+  height: 100%;
+  width: 50%;
+  position: relative;
+  float: left;
+}
+.container .imgBg img {
+  height: 100%;
+  width: 60%;
+  transform: rotate(15deg);
+  opacity: 0.4;
+  position: absolute;
+  top: 9rem;
+}
+.container .left {
+  width: 30%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
+}
+.container .left p {
+  font-size: 2.4rem;
+  text-transform: capitalize;
+}
+.container .left p span {
+  font-size: 5rem;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+.container .right {
+  width: 40%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 7rem;
+  right: 0;
+}
+.container .right img {
+  height: 35rem;
+  width: 42rem;
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  html {
+    font-size: 48%;
+  }
+  .navbar #logo .logoText {
+    font-size: 2.7rem;
+    font-weight: 600;
+    line-height: 6.8rem;
+  }
+  .navbar .nav-items {
+    display: none;
+  }
+  .navbar #hamburger {
+    padding-top: 0.8rem;
+    padding-right: 1rem;
+    display: block;
+    float: right;
+    z-index: 100;
+  }
+  .navbar .hambody {
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(2rem);
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    padding: 1rem 3rem;
+  }
+  .navbar .hambody .ham {
+    height: 9rem;
+    width: 100%;
+    display: block;
+    padding: 1rem;
+    border-bottom: 1px solid #093b4b;
+  }
+  .navbar .hambody .ham .hamLogo {
+    float: left;
+  }
+  .navbar .hambody .ham .hamLogo #logo {
+    display: flex;
+    text-decoration: none;
+  }
+  .navbar .hambody .ham .hamLogo .logoText {
+    color: black;
+  }
+  .navbar .hambody .ham .hamclose {
+    padding-top: 0.5rem;
+    float: right;
+  }
+  .navbar .hambody .ham-items {
+    list-style: none;
+    padding: 4rem;
+  }
+  .navbar .ham-items .items {
+    padding: 1.5rem;
+  }
+  .navbar .ham-items .items a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: 3.2rem;
+    font-weight: 500;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .container .imgBg {
+    width: 100%;
+    position: relative;
+  }
+  .container .imgBg img {
+    height: 90%;
+    width: 70%;
+    position: absolute;
+    top: 38rem;
+    left: 2rem;
+  }
+  .container .left {
+    width: 70%;
+    position: absolute;
+    top: 45rem;
+    left: 4rem;
+  }
+  .container .left p {
+    width: 80%;
+  }
+  .container .left p span {
+    font-size: 4rem;
+  }
+  .container .right {
+    width: 60%;
+    position: absolute;
+    top: 1rem;
+    left: 7rem;
+  }
+  footer {
+    display: none;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  html {
+    font-size: 54%;
+  }
+  .navbar #logo .logoText {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  .container .imgBg {
+    height: 80%;
+    width: 45%;
+    position: relative;
+  }
+  .container .imgBg img {
+    width: 100%;
+  }
+  .container .left {
+    position: absolute;
+    width: 38%;
+    top: 6rem;
+    left: 4rem;
+  }
+  .container .left p {
+    font-size: 2rem;
+    text-transform: capitalize;
+  }
+  .container .right {
+    width: 58%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .right img {
+    height: 30rem;
+    width: 35rem;
+  }
+  footer {
+    position: absolute;
+    top: 59rem;
+    padding: 0rem 1rem;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 1260px) {
+  html {
+    font-size: 60.5%;
+  }
+  .navbar #logo .logoText {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  .container .imgBg {
+    height: 80%;
+    width: 45%;
+    padding-left: 1rem;
+    position: relative;
+  }
+  .container .imgBg img {
+    width: 100%;
+  }
+  .container .left {
+    position: absolute;
+    left: 7rem;
+  }
+  .container .left p {
+    font-size: 2rem;
+    text-transform: capitalize;
+  }
+  .container .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .right img {
+    height: 30rem;
+    width: 35rem;
+  }
+  footer {
+    padding: 0rem 2rem;
+  }
+}

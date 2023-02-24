@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}"></title>
+    <link rel="stylesheet" th:href="@{/css/user/base.css}">
+    <link rel="stylesheet" th:href="@{/css/user/dashboard.css}">
+    <link rel="stylesheet" th:href="@{/css/user/profile.css}">
+    <link rel="stylesheet" th:href="@{/css/user/UpdateContact.css}">
+    <link rel="stylesheet" th:href="@{/css/user/UpdateProfile.css}">
+    <link rel="stylesheet" th:href="@{/css/user/about.css}">
+    <link rel="stylesheet" th:href="@{/css/user/contact.css}">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+            integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+            integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+<div class="navbar">
+    <div class="navLogo">
+        <a th:href="@{/user/}" class="logo">
+            <iconify-icon icon="fluent:contact-card-group-16-filled" class="icon"></iconify-icon>
+            <span class="logoText">Uni-Book</span>
+        </a>
+    </div>
+    <div class="navItems">
+        <img alt="" th:src="@{'/img/'+ ${user.id} + '_'+ ${user.imageUrl}}">
+        <span class="usernameText" th:text="${user.name}"></span>
+        <div class="arrow">
+                <span class="arrowIcon"><iconify-icon icon="material-symbols:keyboard-arrow-down" id="arrow">
+                    </iconify-icon></span>
+            <div class="dropdown hide" id="dropdown">
+                <a th:href="@{/user/profile}">
+                    <iconify-icon icon="material-symbols:lab-profile"></iconify-icon>
+                    <span>Profile</span></a>
+
+                <a th:href="@{/logout}">
+                    <iconify-icon icon="ri:logout-circle-r-line"></iconify-icon>
+                    <span>Logout</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div th:replace="${content}"></div>
+
+<footer>
+    <div class="footerlogo">
+        <a th:href="@{/user/}" id="logo">
+            <iconify-icon icon="fluent:contact-card-group-16-filled" class="icon"></iconify-icon>
+            <span class="logoText">Uni-Book</span>
+        </a>
+    </div>
+    <div class="footerItems">
+        <div class="items">
+            <ul>
+                <span class="heading">KNOW ABOUT</span>
+                <li>
+                    <a th:href="@{/user/}"><iconify-icon icon="radix-icons:dashboard"></iconify-icon><span
+                            class="footerText">Dashboard</span></a>
+                </li>
+                <li>
+                    <a th:href="@{/user/about}"><iconify-icon icon="mdi:about-circle-outline"></iconify-icon><span
+                            class="footerText">About us</span></a>
+                </li>
+                <li>
+                    <a th:href="@{/user/contact}"><iconify-icon
+                            icon="material-symbols:contact-page-outline"></iconify-icon><span
+                            class="footerText">Contact us</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="items">
+            <ul>
+                <span class="heading">Contact</span>
+                <li>
+                    <a th:href="@{/user/}"><iconify-icon
+                            icon="material-symbols:person-add-outline"></iconify-icon><span class="footerText">Add
+                                Contact</span></a>
+                </li>
+                <li>
+                    <a th:href="@{/user/}"><iconify-icon icon="clarity:eye-show-line"></iconify-icon><span
+                            class="footerText">Show
+                                Contact</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="items">
+            <ul>
+                <span class="heading">SOCIAL</span>
+                <li>
+                    <a href=""><iconify-icon icon="mingcute:facebook-line"></iconify-icon><span
+                            class="footerText">Facebook</span></a>
+                </li>
+                <li>
+                    <a href=""><iconify-icon icon="jam:twitter-circle"></iconify-icon><span
+                            class="footerText">Twitter</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="items">
+            <ul>
+                <span class="heading">Username</span>
+                <li>
+                    <a th:href="@{/user/profile}"><iconify-icon
+                            icon="material-symbols:lab-profile"></iconify-icon><span
+                            class="footerText">Profile</span></a>
+                </li>
+                <li>
+                    <a th:href="@{/logout}"><iconify-icon icon="ri:logout-circle-r-line"></iconify-icon><span
+                            class="footerText">Logout</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script th:src="@{/js/script.js}"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+</body>
+
+</html>

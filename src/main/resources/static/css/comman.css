@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  height: 100%;
+  width: 100%;
+  min-width: 300px;
+}
+.navbar {
+  height: 6.2rem;
+  width: 100%;
+  padding: 0rem 4rem;
+  background-color: #093b4b;
+}
+.navbar .logo {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  float: left;
+  font-size: 5.5rem;
+}
+.navbar .logo .logoText {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 6.2rem;
+}
+.navbar .nav-items {
+  float: right;
+  list-style: none;
+  display: flex;
+  line-height: 6.2rem;
+}
+.navbar .nav-items .items a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1.8rem;
+  font-size: 2.1rem;
+  font-weight: 500;
+}
+.navbar .nav-items .items a:hover {
+  color: black;
+  background-color: #bdbdbd;
+  border-radius: 1.5rem;
+}
+.navbar #hamburger {
+  display: none;
+}
+.navbar .hambody {
+  display: none;
+}
+footer {
+  background-color: #093b4b;
+  height: 17rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0rem 25rem;
+}
+footer .footerlogo a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  float: left;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 6.2rem;
+  padding: 1.3rem;
+}
+footer .footer-items {
+  list-style: none;
+}
+
+footer .footer-items li {
+  padding: 0.5rem;
+}
+
+footer .footer-items li span {
+  color: #bdbdbd;
+  font-size: 1.9rem;
+}
+
+footer .footer-items li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.8rem;
+}
+
+/* error message */
+
+.valid {
+  border: 0.1rem solid #e7e4e4;
+}
+.invalid {
+  border: 0.1rem solid red;
+}
+.invalid-feedback {
+  color: red;
+  font-size: 1.3rem;
+  padding-left: 1.3rem;
+}
+.unCheck {
+  color: red;
+}
+.checked {
+  color: black;
+}
+.alertBox {
+  height: 11%;
+  width: 93%;
+  margin-bottom: 2rem;
+}
+
+.alert {
+  font-size: 1.2rem;
+  height: 100%;
+  width: 100%;
+  margin-left: 1rem;
+  padding-left: 1.4rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.danger {
+  background-color: #f44336;
+}
+
+.success {
+  background-color: #c8e6c9;
+}

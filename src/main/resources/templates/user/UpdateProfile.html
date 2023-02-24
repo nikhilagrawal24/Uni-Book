@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="user/base::layout(~{::section})">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Profile</title>
+
+</head>
+
+<body>
+
+<section>
+  <div class="ProfileUpdatecontainer">
+    <div class="ProfileUpdateForm">
+      <div class="first">
+        <p>Update Your Profile</p>
+        <img th:src="@{/img/profile.png}" alt="">
+        <span th:text="${user.name}"></span>
+        <span class="border"></span>
+      </div>
+
+      <div class="ProfileUpdateContainerForm">
+        <form th:action="@{/user/updateprofile}" enctype="multipart/form-data" method="post">
+          <p>Name: <input type="text" name="name" th:value="${user.name}" id="username"
+                          placeholder="Enter your name"></p>
+          <p>Email: <input type="email" name="email" th:value="${user.email}" id="email"
+                           placeholder="Email address"></p>
+          <p>Number: <input type="text" name="number" th:value="${user.number}" id="number"
+                            placeholder="Mobile Number"></p>
+          <input type="hidden" name="password" th:value="${user.password}" id="password"
+                 placeholder="Enter password">
+          <p>Image: <input type="file" name="imageUrl" th:value="${user.imageUrl}" id="profilePic"></p>
+          <button type="submit" id="submit">Update</button>
+          <button type="reset" id="reset">Reset</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+</body>
+
+</html>

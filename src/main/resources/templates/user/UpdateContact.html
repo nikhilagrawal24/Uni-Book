@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="user/base::layout(~{::section})">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Contact</title>
+
+</head>
+
+<body>
+
+<section>
+    <div class="ContactUpdatecontainer">
+        <div class="ContactUpdateForm">
+            <div class="first">
+                <p>Update Contact</p>
+            </div>
+            <div class="ContactUpdateContainerForm">
+                <form th:action="@{/user/contactUpdate}" th:object="${contact}" method="post"
+                      enctype="multipart/form-data">
+                    <input type="hidden" name="cId" th:value="${contact.cId} ">
+                    <p>Name: <input type="text" name="cName" th:value="${contact.cName}" id="username"
+                                    placeholder="Enter your name"></p>
+                    <p>Email: <input type="email" name="cEmail" th:value="${contact.cEmail}" id="email"
+                                     placeholder="Email address"></p>
+                    <p>Number: <input type="text" name="cNumber" th:value="${contact.cNumber}" id="number"
+                                      placeholder="Mobile Number"></p>
+                    <p>About: <input type="text" name="work" th:value="${contact.work}" id="about"
+                                     placeholder="Write something"></p>
+                    <p>Image: <input type="file" name="cProfilePic" th:value="${contact.cProfilePic}"
+                                     id="profilePic"></p>
+                    <button type="submit" id="submit">Update</button>
+                    <button type="reset" id="reset">Reset</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+</body>
+
+</html>

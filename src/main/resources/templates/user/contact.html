@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="user/base::layout(~{::section})">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Profile</title>
+</head>
+
+<body>
+
+<section>
+
+  <div class="contactUsimgBg">
+    <img th:src="@{/img/contactbg.svg}" alt="" srcset="">
+  </div>
+  <div class="contactUscontainer">
+    <div class="left">
+      <img th:src="@{/img/contactus.png}" alt="">
+    </div>
+    <div class="right">
+      <div class="heading">
+        <h1>Contact us - </h1>
+        <p>Leave a message</p>
+      </div>
+      <form th:action="@{/user/complain}" method="post">
+        <input type="text" name="name" placeholder="Enter Your Name">
+        <input type="email" name="email" placeholder="Enter a valid email address">
+        <textarea id="" name="content" cols="32" rows="4" placeholder="Enter your message"></textarea>
+        <div class="btn">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+</body>
+
+</html>

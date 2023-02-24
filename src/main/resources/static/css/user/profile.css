@@ -1,0 +1,122 @@
+body {
+  min-width: 30rem;
+}
+.Profilecontainer {
+  height: 58.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Profilecontainer .profileForm {
+  height: 80%;
+  width: 38%;
+  padding: 1rem 2rem;
+  background-color: rgb(204, 202, 202);
+  border-radius: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 2rem;
+}
+.Profilecontainer .profileForm .first {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40%;
+  width: 100%;
+}
+.Profilecontainer .profileForm .first p {
+  font-weight: 600;
+  font-size: 2.8rem;
+  margin-bottom: 0.4rem;
+}
+.Profilecontainer .profileForm .first img {
+  width: 31%;
+  height: 60%;
+  margin-bottom: 1rem;
+}
+.Profilecontainer .profileForm .first span {
+  font-size: 3rem;
+  margin-bottom: 0.4rem;
+}
+.Profilecontainer .profileForm .first .border {
+  border: 0.1rem solid rgb(184, 182, 182);
+  width: 72%;
+  margin-bottom: 1.3rem;
+}
+.profileData {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem;
+  padding-top: 2rem;
+}
+.profileData p {
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.profileData p label {
+  font-size: 2rem;
+  width: 100%;
+  display: flex;
+}
+.profileData p label span {
+  padding-left: 4rem;
+  font-size: 1.7rem;
+}
+.profileData a {
+  width: 70%;
+}
+.profileData a #submit {
+  width: 100%;
+  height: 3.5rem;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: #093b4b;
+  color: white;
+  font-size: 2rem;
+  margin-top: 1.9rem;
+}
+.profileData #reset {
+  width: 100%;
+  height: 3.5rem;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: red;
+  color: white;
+  font-size: 2rem;
+  margin-top: 1.2rem;
+}
+
+@media screen and (min-width: 300px) and (max-width: 599px) {
+  .Profilecontainer .profileForm {
+    width: 90%;
+  }
+  .profileData #submit {
+    width: 95%;
+  }
+  .profileData #reset {
+    width: 95%;
+  }
+  .profileData #submit {
+    width: 70%;
+  }
+  .profileData #reset {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .Profilecontainer .profileForm {
+    width: 49%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .Profilecontainer .profileForm {
+    width: 45%;
+  }
+}
